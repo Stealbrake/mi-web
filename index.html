@@ -20,195 +20,57 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="logo">
-            CityLife
-        </div>
+        <div class="logo">CityLife</div>
 
         <div class="nav-icons">
-            <i class="fa-solid fa-house"></i>
-            <i class="fa-solid fa-map"></i>
-            <i class="fa-solid fa-bell"></i>
-            <i class="fa-solid fa-user"></i>
+
+            <!-- SPA NAVIGATION -->
+            <i class="fa-solid fa-house" onclick="location.hash='home'"></i>
+
+            <i class="fa-solid fa-map" onclick="location.hash='explore'"></i>
+
+            <i class="fa-solid fa-bell" onclick="location.hash='notifications'"></i>
+
+            <i class="fa-solid fa-user" onclick="location.hash='perfil'"></i>
+
         </div>
     </nav>
 
-    <main>
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <div class="overlay"></div>
-
-            <div class="hero-content">
-                <h1>
-                    Descubre <span>San Juan del Sur</span>
-                </h1>
-
-                <p>
-                    La plataforma social donde turistas, locales y negocios
-                    conectan en tiempo real.
-                </p>
-
-                <div class="hero-buttons">
-                    <button class="primary-btn" type="button">
-                        Explorar
-                    </button>
-
-                    <button class="secondary-btn" type="button">
-                        Ver Eventos
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- CATEGORÍAS -->
-        <section class="categories">
-            <div class="card">
-                <i class="fa-solid fa-utensils"></i>
-                <h3>Restaurantes</h3>
-                <p>Descubre los mejores lugares para comer.</p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-martini-glass"></i>
-                <h3>Vida Nocturna</h3>
-                <p>Bares, fiestas y eventos cerca de ti.</p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-hotel"></i>
-                <h3>Hoteles</h3>
-                <p>Hospedajes para turistas y viajeros.</p>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-calendar"></i>
-                <h3>Eventos</h3>
-                <p>Actividades y experiencias en la ciudad.</p>
-            </div>
-        </section>
-
-        <!-- SOCIAL FEED -->
-        <section class="feed">
-            <div class="feed-title">
-                <h2>Explora la Ciudad</h2>
-                <p>Lo que está pasando ahora mismo</p>
-            </div>
-
-            <!-- POST 1 -->
-            <article class="post">
-                <div class="post-header">
-                    <div class="user-info">
-                        <img
-                            src="https://i.pravatar.cc/100?img=12"
-                            alt="Foto de perfil de Emily Johnson"
-                        />
-
-                        <div>
-                            <h4>Emily Johnson</h4>
-                            <span>San Juan del Sur</span>
-                        </div>
-                    </div>
-
-                    <i class="fa-solid fa-ellipsis"></i>
-                </div>
-
-                <img
-                    class="post-image"
-                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-                    alt="Atardecer en la playa"
-                />
-
-                <div class="post-actions">
-                    <div class="left-actions">
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-regular fa-comment"></i>
-                        <i class="fa-regular fa-paper-plane"></i>
-                    </div>
-
-                    <i class="fa-regular fa-bookmark"></i>
-                </div>
-
-                <div class="post-content">
-                    <h4>Emily Johnson</h4>
-
-                    <p>
-                        Increíble atardecer en la playa 🌴☀️
-                    </p>
-                </div>
-            </article>
-
-            <!-- POST 2 -->
-            <article class="post">
-                <div class="post-header">
-                    <div class="user-info">
-                        <img
-                            src="https://i.pravatar.cc/100?img=22"
-                            alt="Foto de perfil de Carlos Méndez"
-                        />
-
-                        <div>
-                            <h4>Carlos Méndez</h4>
-                            <span>Evento Local</span>
-                        </div>
-                    </div>
-
-                    <i class="fa-solid fa-ellipsis"></i>
-                </div>
-
-                <img
-                    class="post-image"
-                    src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7"
-                    alt="Evento nocturno con luces y personas"
-                />
-
-                <div class="post-actions">
-                    <div class="left-actions">
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-regular fa-comment"></i>
-                        <i class="fa-regular fa-paper-plane"></i>
-                    </div>
-
-                    <i class="fa-regular fa-bookmark"></i>
-                </div>
-
-                <div class="post-content">
-                    <h4>Carlos Méndez</h4>
-
-                    <p>
-                        Fiesta esta noche en el centro 🔥🎉
-                    </p>
-                </div>
-            </article>
-        </section>
-    </main>
+    <!-- CONTENEDOR SPA -->
+    <main id="app"></main>
 
     <!-- MOBILE NAVIGATION -->
     <nav class="mobile-nav">
-        <div class="mobile-item active">
+
+        <div class="mobile-item" onclick="location.hash='home'">
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </div>
 
-        <div class="mobile-item">
+        <div class="mobile-item" onclick="location.hash='explore'">
             <i class="fa-solid fa-map-location-dot"></i>
             <span>Mapa</span>
         </div>
 
+        <!-- ESTE BOTÓN NO CAMBIA DE PÁGINA (lo puedes usar después para crear posts) -->
         <div class="mobile-item center-button">
             <i class="fa-solid fa-plus"></i>
         </div>
 
-        <div class="mobile-item">
+        <div class="mobile-item" onclick="location.hash='eventos'">
             <i class="fa-solid fa-calendar"></i>
             <span>Eventos</span>
         </div>
 
-        <div class="mobile-item">
+        <div class="mobile-item" onclick="location.hash='perfil'">
             <i class="fa-solid fa-user"></i>
             <span>Perfil</span>
         </div>
+
     </nav>
 
-    <!-- JAVASCRIPT -->
+    <!-- SCRIPTS (ORDEN IMPORTANTE) -->
+    <script src="js/navigation.js"></script>
     <script src="js/script.js"></script>
 
 </body>
